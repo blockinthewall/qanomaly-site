@@ -241,6 +241,60 @@ p{margin:.6rem 0 0;line-height:1.75}
 .section.light .person{background:linear-gradient(180deg,color-mix(in oklab,#FFFFFF 92%,var(--accent) 8%),color-mix(in oklab,#FFFFFF 94%,var(--accent2) 6%));border-color:color-mix(in oklab,var(--inkL) 18%,transparent);box-shadow:0 2px 8px rgba(14,26,43,.1)}
 .section.light .partner .name{color:var(--inkL)}
 
+#consent-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px;
+  background: #111;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  display: none;
+  z-index: 9999;
+}
+
+#consent-banner-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#consent-banner p {
+  margin: 0;
+  flex: 1 1 250px;
+}
+
+#consent-banner-buttons {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+#consent-banner button {
+  cursor: pointer;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+#consent-accept {
+  background: #4caf50;
+  color: #fff;
+}
+
+#consent-reject {
+  background: #555;
+  color: #fff;
+}
+
+
 /* Page lock helper (menu only) */
 html.locked, body.locked{overflow:hidden}
 
