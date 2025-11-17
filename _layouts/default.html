@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Qanomaly — Web3 roots. Boundless horizons.</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="./styles.css" />
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+
+  const storedConsent = localStorage.getItem('consentMode');
+
+  if (storedConsent === null) {
+    // No consent saved → deny everything
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      personalization_storage: 'denied',
+      functionality_storage: 'denied',
+      security_storage: 'denied'
+    });
+  } else {
+    // Consent exists → apply previous choice
+    gtag('consent', 'default', JSON.parse(storedConsent));
+  }
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WV48VV9W');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WV48VV9W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
+<header class="header" id="hdr">
+  <div class="container wrap">
+    <a href="#" class="brand" id="brand" aria-label="Qanomaly">
+      <span class="mark" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 64 64" fill="none">
+          <defs>
+            <linearGradient id="qStroke" class="qgrad" x1="0" y1="0" x2="64" y2="64">
+              <stop offset="0%"/><stop offset="100%"/>
+            </linearGradient>
+            <radialGradient id="qFill" class="qgrad" cx="50%" cy="35%" r="60%">
+              <stop offset="0%"/><stop offset="100%"/>
+            </radialGradient>
+          </defs>
+          <circle cx="30" cy="30" r="16" stroke-width="5" class="qstroke" fill="none" stroke-linecap="round"/>
+          <path d="M38 38 L48 48" stroke-width="5" class="qstroke" stroke-linecap="round"/>
+          <circle cx="46" cy="18" r="4" class="qfill"/>
+        </svg>
+      </span>
+      <span class="word">Qanomaly</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#community">Community</a>
+      <a href="#story">Story</a>
+      <a href="#services">Services</a>
+      <a href="#partners">Partners</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Open menu"><span></span></button>
+  </div>
+</header>
+
+<nav class="menu" id="menu" aria-label="Overlay Menu">
+  <ul>
+    <li><a href="#community">Community</a></li>
+    <li><a href="#story">Story</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#partners">Partners</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<footer class="section" style="padding:40px 0" data-mode="dark" data-accent="teal">
+  <div class="container" style="opacity:.85">© <span id="yr"></span> Qanomaly Pty Ltd</div>
+</footer>
+
+  <div id="consent-banner">
+  <div id="consent-banner-content">
+    <p>
+      We use cookies and similar technologies for analytics and advertising.
+      You can accept or reject these.
+    </p>
+    <div id="consent-banner-buttons">
+      <button id="consent-reject">Reject</button>
+      <button id="consent-accept">Accept</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- JS -->
+<script src="./script.js"></script>
+</body>
+</html>
